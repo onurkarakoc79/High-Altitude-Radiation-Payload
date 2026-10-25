@@ -90,7 +90,7 @@ I was responsible for the embedded hardware and software of the payload and grou
 - Designed the payload flight card and the ground-station board: schematic capture, 4-layer PCB design, fabrication and assembly
 - Integrated the İVMER Geiger–Müller read-out, high-voltage and counter circuits with the ESP32-S3 flight computer
 - Wrote the flight and ground-station firmware: sensor drivers, LoRa/GPRS telemetry, Kalman altitude estimation, SD logging, heater control
-- Ran the environmental tests, analysed the flight data in Python, and performed the post-flight failure analysis
+- Ran the environmental tests, processed and plotted the flight data in Python, and performed the post-flight failure analysis
 
 ## Documents
 
@@ -104,4 +104,4 @@ I was responsible for the embedded hardware and software of the payload and grou
 
 ## Skills demonstrated
 
-`Radiation detection` · `High-voltage design` · `Multi-layer PCB (KiCad)` · `ESP32` · `LoRa / GPRS telemetry` · `Kalman filtering` · `Environmental testing` · `Failure analysis` · `Python data analysis`
+`Radiation detection` · `High-voltage integration` · `Multi-layer PCB (KiCad)` · `ESP32` · `LoRa / GPRS telemetry` · `Kalman filtering` · `Environmental testing` · `Failure analysis` · `Python (NumPy, Matplotlib)`
