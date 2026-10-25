@@ -1,10 +1,10 @@
 # Reusable High-Altitude Radiation Measurement System
 
-**B.S. Physics Thesis — Middle East Technical University (METU), İVMER**
-Supervisor: Prof. Dr. M. Bilge Demirköz · 2022 – 2024
-Funded by **TÜBİTAK 2209-A** (Project No. 1919B012212231) · Flown with the **Turkish State Meteorological Service (TSMS)**
+B.S. Physics Thesis — Middle East Technical University (METU), İVMER<br>
+Supervisor: Prof. Dr. M. Bilge Demirköz · 2022 – 2024<br>
+Funded by TÜBİTAK 2209-A (Project No. 1919B012212231) · Flown with the Turkish State Meteorological Service (TSMS)
 
-A reusable stratospheric balloon payload that measures cosmic-ray dose rate as a function of altitude, aimed at observing the **Regener–Pfotzer maximum**. I designed the payload's embedded hardware and firmware and the ground station, flew it on a meteorological balloon to **~33 km**, and recovered it **147 km** from the launch site.
+A reusable stratospheric balloon payload that measures cosmic-ray dose rate as a function of altitude, aimed at observing the Regener–Pfotzer maximum. I designed the payload's embedded hardware and firmware and the ground station, flew it on a meteorological balloon to ~33 km, and recovered it 147 km from the launch site.
 
 > This repository is a project showcase. Design files and firmware are not published; the thesis and poster are.
 
@@ -17,10 +17,10 @@ A reusable stratospheric balloon payload that measures cosmic-ray dose rate as a
 
 | | |
 |---|---|
-| Maximum altitude | ~33 km (barometric), full ascent **and** descent profile recorded |
-| Radiation data | Geiger counts up to ~20 km; dose-rate profile agrees with the **CARI-7A** model |
-| Telemetry range | **180 km** LoRa link, **83 %** packets received at maximum range |
-| Recovery | GPRS position SMS every minute after landing; payload recovered from a tree **147 km** away |
+| Maximum altitude | ~33 km (barometric), full ascent and descent profile recorded |
+| Radiation data | Geiger counts up to ~20 km; dose-rate profile agrees with the CARI-7A model |
+| Telemetry range | 180 km LoRa link, 83 % packets received at maximum range |
+| Recovery | GPRS position SMS every minute after landing; payload recovered from a tree 147 km away |
 | Thermal | Inside stayed above −25 °C while outside reached −50 °C; cold-tested at −72 °C (dry ice) |
 | Mass | 1100 g payload (TSMS limit), EPS case with conical nose, 2 m parachute (≈3.5 m/s descent) |
 
@@ -34,7 +34,7 @@ The measured dose rate rises with altitude and follows the CARI-7A model up to ~
 
 ### Failure analysis — high-voltage breakdown at low pressure
 
-At ~20 km the Geiger data stopped. Post-flight analysis traced it to **Paschen breakdown**: the breakdown voltage of air falls sharply at low pressure, and the 1.4 mm lead spacing of a transistor in the high-voltage stage was no longer enough to prevent an arc. The arc destroyed the transistor; after replacing it, the circuit worked again. The fix for the next flight is **conformal coating** of the HV section and larger creepage distances.
+At ~20 km the Geiger data stopped. Post-flight analysis traced it to Paschen breakdown: the breakdown voltage of air falls sharply at low pressure, and the 1.4 mm lead spacing of a transistor in the high-voltage stage was no longer enough to prevent an arc. The arc destroyed the transistor; after replacing it, the circuit worked again. The fix for the next flight is conformal coating of the HV section and larger creepage distances.
 
 ### Flight profile and environment
 
@@ -43,14 +43,14 @@ At ~20 km the Geiger data stopped. Post-flight analysis traced it to **Paschen b
   <img src="images/temperature_vs_time.png" width="420" alt="Inside and outside temperature vs time">
 </p>
 
-- Barometric altitude tracks the co-flown Meteosis radiosonde during ascent. Unlike the radiosonde, the payload also logged the **full descent**.
+- Barometric altitude tracks the co-flown Meteosis radiosonde during ascent. Unlike the radiosonde, the payload also logged the full descent.
 - Outside temperature matches the radiosonde; the insulated case and SD-card heater kept the electronics far warmer than ambient.
 
 <p align="center"><img src="images/humidity_vs_altitude.png" width="420" alt="Humidity vs altitude"></p>
 
 ## System architecture
 
-**Flight payload**
+### Flight payload
 
 | Block | Implementation |
 |---|---|
@@ -63,7 +63,9 @@ At ~20 km the Geiger data stopped. Post-flight analysis traced it to **Paschen b
 | Data logging | SD card with relay-controlled heater |
 | Power | 6 × 3200 mAh Li-ion (2S3P) |
 
-**Ground station:** ESP32 + LoRa SX1276 receiver, SD logging, directional high-gain antenna, custom PCB and enclosure.
+### Ground station
+
+ESP32 + LoRa SX1276 receiver, SD logging, directional high-gain antenna, custom PCB and enclosure.
 
 <p align="center">
   <img src="images/ground_station_pcb.jpg" width="300" alt="Ground station PCB layout">
@@ -95,7 +97,7 @@ I was responsible for the embedded hardware and software of the payload and grou
 - 📄 [B.S. Thesis — Final Report](docs/thesis.pdf)
 - 🖼️ [Poster](posters/poster.pdf)
 
-**Publications**
+### Publications
 
 - *Design of a Reusable Radiation Measurement System Integrated with the High-Altitude Balloon*, Ankara International Aerospace Conference (AIAC 2023) Proceedings, METU
 - *Design of a Reusable Radiation Measurement System Integrated with the High-Altitude Balloon*, ATMOS 2024 — Atmospheric Science Conference, Abstract Book, p. 354
